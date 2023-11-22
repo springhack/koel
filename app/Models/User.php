@@ -71,7 +71,7 @@ class User extends Authenticatable
     protected function avatar(): Attribute
     {
         return Attribute::get(
-            fn () => sprintf('https://www.gravatar.com/avatar/%s?s=192&d=robohash', md5($this->email))
+            fn () => sprintf('https://gravatar.loli.net/avatar/%s?s=192&d=robohash', md5($this->email))
         );
     }
 

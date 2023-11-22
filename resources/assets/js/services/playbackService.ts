@@ -36,6 +36,11 @@ class PlaybackService {
     watch(volumeManager.volume, volume => this.player.setVolume(volume), { immediate: true })
 
     this.initialized = true
+
+    globalThis.Koel = {
+      playbackService: this,
+      queueStore
+    };
   }
 
   public registerPlay (song: Song) {
